@@ -1,0 +1,16 @@
+name: testing arc runner on minikube
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  echo:
+    runs-on: arc-runner-set
+    steps:
+      - name: Echo runner status
+        run: |
+          echo "runner working"
+          sleep 5
