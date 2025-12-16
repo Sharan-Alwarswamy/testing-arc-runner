@@ -13,5 +13,5 @@ jobs:
       - name: Echo runner status
         run: |
           echo "runner working"
-          sleep 5
           date
+          sleep 30
