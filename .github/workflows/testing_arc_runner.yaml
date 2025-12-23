@@ -1,6 +1,12 @@
 name: testing arc runner on minikube
 
 on:
+  workflow_call:
+    inputs:
+      region:
+        description: 'Select the env'
+        required: true
+        type: string
   workflow_dispatch:
   push:
     branches:
@@ -12,6 +18,6 @@ jobs:
     steps:
       - name: Echo runner status
         run: |
-          echo "runner working"
+          echo "runner working in region ${{ inputs.region }}"
           date
           sleep 30
