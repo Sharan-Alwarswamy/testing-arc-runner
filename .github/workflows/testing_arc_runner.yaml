@@ -1,6 +1,7 @@
 name: testing arc runner on minikube
 
 on:
+  workflow_call:
   workflow_dispatch:
   push:
     branches:
