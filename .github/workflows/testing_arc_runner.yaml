@@ -14,7 +14,9 @@ on:
 
 jobs:
   echo:
-    runs-on: arc-runner-set
+    runs-on:
+      group: Default
+      labels: arc-runner-set
     steps:
       - name: Echo runner status
         run: |
